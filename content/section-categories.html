@@ -1,0 +1,195 @@
+<section id="categories" class="categiries site-content fixed">
+   <div class="section-heading">
+      <div>
+         <h2 class="categiries__title title">Готовые шаблоны</h2>
+         <p class="categiries__subtitle subtitle">С момента последнего тестирования мы обновили больше 2000 строчек
+            кода,
+            но продукт еще можно тестировать и тестировать. Сейчас мы наполняем демо-сайт, здесь будет много различных
+            примеров под разные ниши.
+         </p>
+      </div>
+      <div class="categiries__sticker">
+         <div class="sticker">
+            <div class="categiries__sticker-info" style="z-index: 5;">
+               <svg xmlns="http://www.w3.org/2000/svg" style="z-index: 5;" fill="none" viewBox="0 0 20 20">
+                  <path stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                     d="M16 11v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6m4-3h6v6M8 12 19 1" />
+               </svg>
+               <span style="z-index: 5;">Нажмите на квиз, чтобы пройти его демо-версию</span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--=include components/btn-filter-mobile.html -->
+
+   <form class="categiries__filters-list" name="filters">
+      <div class="categiries__filters-list-container" role="tablist">
+         <div class="categiries__filter-item filter-item all-categories js-filter-item active" role="tab" aria-selected="false"
+            data-id="all">
+            <label for="all" class="filter-item__label"><span>Все категории</span></label>
+            <input id="all" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Все категории">
+            
+         </div>
+
+         
+
+         <div class="categiries__filter-item filter-item js-filter-item" role="tab" aria-selected="true"
+            data-id="furniture">
+            <label for="furniture" class="filter-item__label"><span>Расчет стоимости мебели</span></label>
+            <input id="furniture" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Расчет стоимости мебели">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="kitchen">
+            <label for="kitchen" class="filter-item__label"><span>Кухни на заказ</span></label>
+            <input id="kitchen" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Кухни на заказ">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="health">
+            <label for="health" class="filter-item__label"><span>Питание и здоровье</span></label>
+            <input id="health" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Питание и здоровье">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="tours">
+            <label for="tours" class="filter-item__label"><span>Подбор туров для турагентств</span></label>
+            <input id="tours" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Подбор туров для турагентств">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="realty">
+            <label for="realty" class="filter-item__label"><span>Квизы по недвижимости</span></label>
+            <input id="realty" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Квизы по недвижимости">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="courses">
+            <label for="courses" class="filter-item__label"><span>Подбор подходящих курсов</span></label>
+            <input id="courses" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Подбор подходящих курсов">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="cars">
+            <label for="cars" class="filter-item__label"><span>Автоподбор</span></label>
+            <input id="cars" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Автоподбор">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="interior">
+            <label for="interior" class="filter-item__label"><span>Дизайн интерьеров</span></label>
+            <input id="interior" class="filter-item__input visually-hidden" type="checkbox" name="category"
+               value="Дизайн интерьеров">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+
+         <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="other">
+            <label for="other" class="filter-item__label"><span>Другие</span></label>
+            <input id="other" class="filter-item__input visually-hidden" type="checkbox" name="category" value="Другие">
+            <button class="filter-item__btn" type="button">
+               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
+                  <path
+                     d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                     d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+                     stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+               </svg>
+            </button>
+         </div>
+      </div>
+   </form>
+
+   <!--=include section-quize-cards.html -->
+
+</section>

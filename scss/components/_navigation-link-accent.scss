@@ -1,0 +1,56 @@
+.navigation-link-accent {
+   background-color: var(--quizle-accent-light-color);
+   border-radius: 35px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-transition: 0.2s;
+   -o-transition: 0.2s;
+   transition: 0.2s;
+
+   @include mobile {
+      border-radius: 20px;
+   }
+
+   @include hover {
+      background-color: var(--quizle-primary-color);
+
+      a {
+         color: var(--quizle-text-color);
+      }
+
+      svg {
+         rotate: 45deg;
+      }
+   }
+
+   a {
+      @include fluid-text(16, 12);
+      display: inline;
+      padding: 10px 25px;
+      color: var(--quizle-text-color);
+      font-weight: 700;
+
+      @include mobile {
+         padding: 6px 9px 6px 15px;
+      }
+   }
+
+   svg {
+      width: 26px;
+      height: 26px;
+      margin-left: 10px;
+
+      @include mobile {
+         width: 20px;
+         height: 20px;
+         margin-left: 5px;
+      }
+   }
+}

@@ -1,0 +1,190 @@
+.section-qa {
+   padding-block: var(--section-padding-y);
+
+   & .circle-decor {
+      @include mobile {
+         rotate: 21deg;
+      }
+   }
+
+   &__subtitle {
+      line-height: 1.6;
+
+      a {
+         padding: 5px 10px 7px 20px;
+         font-size: 14px;
+         border: 1px solid var(--quizle-text-color);
+         border-radius: 30px;
+
+         @include hover {
+            background-color: var(--quizle-accent-pink-light-color);
+            color: var(--quizle-text-color);
+            border: none;
+            font-weight: 700;
+
+            svg {
+               rotate: 45deg;
+               color: inherit;
+            }
+         }
+
+         @include tablet {
+            display: block;
+            margin-top: 10px;
+            width: 161px;
+         }
+      }
+   }
+
+   &__inner {
+      margin: 0 auto;
+   }
+
+   &__list {
+      margin: 0;
+      padding: 0 35px;
+      list-style: none;
+
+      &--columns {
+         @include flex-row-between;
+         padding: 0;
+         margin: 0 auto;
+         max-width: 1440px;
+
+         @include tablet-bottom {
+            display: block;
+         }
+      }
+   }
+
+   &__column {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 10px);
+      flex: 0 1 calc(50% - 10px);
+      padding: 0;
+      list-style: none;
+   }
+
+   &__item {
+      position: relative;
+      padding: 32px 20px 28px 24px;
+      border: 1px solid var(--quizle-primary-color);
+      background-color: #fff;
+      transition: .5s;
+      cursor: pointer;
+
+      &:after,
+      &:before {
+         content: '';
+         position: absolute;
+         top: 43px;
+         right: 27px;
+         width: 16px;
+         height: 2px;
+         border-radius: 30px;
+         background-color: var(--quizle-primary-color);
+      }
+
+      &:after {
+         -webkit-transition: -webkit-transform .5s ease-in-out .1s;
+         transition: -webkit-transform .5s ease-in-out .1s;
+         transition: transform .5s ease-in-out .1s;
+         transition: transform .5s ease-in-out .1s, -webkit-transform .5s ease-in-out .1s;
+         -webkit-transform: rotate(-90deg);
+         -ms-transform: rotate(-90deg);
+         transform: rotate(-90deg);
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 24px;
+      }
+
+      &.js-active {
+         background: var(--quizle-primary-color);
+
+         &:before {
+            background-color: #fff;
+         }
+
+         &:after {
+            background-color: #fff;
+            transform: none;
+         }
+
+         & .section-qa__item-title {
+            margin-bottom: 30px;
+            color: #fff;
+         }
+
+         & .section-qa__item-text-wrapper {
+            max-height: 1000px;
+            -webkit-transition: max-height 1s ease-in-out;
+            transition: max-height 1s ease-in-out;
+         }
+      }
+
+      &--columns {
+         padding: 0 55px 0 3.9%;
+
+         &:after,
+         &:before {
+            top: 64px;
+            right: 24px;
+            -webkit-transition: .4s;
+            transition: .4s;
+         }
+
+         &.js-active {
+            padding: 35px 52px 49px 24px;
+
+            &:after,
+            &:before {
+               top: 43px;
+            }
+
+            & .section-qa__item-title {
+               min-height: 0;
+               margin-bottom: 30px;
+            }
+         }
+
+         & .section-qa__item-title {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            min-height: 129px;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+         }
+      }
+   }
+
+   &__item-title {
+      @include fluid-text(24, 20);
+      margin: 0;
+      font-weight: 800;
+      color: var(--quizle-text-color);
+      -webkit-transition: margin .2s;
+      transition: margin .2s;
+   }
+
+   &__item-text-wrapper {
+      overflow: hidden;
+      max-height: 0;
+      -webkit-transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+      transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+   }
+
+   &__item-text {
+      display: block;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120%;
+      margin-top: 24px;
+      color: #fff;
+
+      &--bold {
+         font-weight: 700;
+      }
+   }
+}

@@ -1,0 +1,227 @@
+.circle-decor {
+   position: relative;
+   display: inline-block;
+   width: 90px;
+   height: 90px;
+   background-color: var(--quizle-primary-color);
+   border-radius: 50%;
+   vertical-align: middle;
+   z-index: 3;
+   -ms-flex-negative: 0;
+       flex-shrink: 0;
+
+   @include tablet {
+      width: 70px;
+      height: 70px;
+   }
+}
+
+.arrow-decor {
+   width: 130px;
+   height: 42px;
+   position: absolute;
+   top: 50%;
+   -webkit-transform: translate(20%, -50%);
+       -ms-transform: translate(20%, -50%);
+           transform: translate(20%, -50%);
+   vertical-align: middle;
+
+   @include tablet {
+      width: 80px;
+   }
+}
+
+.rectangle-decor {
+   display: inline-block;
+   background-color: var(--quizle-accent-light-color);
+   color: var(--quizle-primary-color);
+   border-radius: 56px;
+   font-family: "Figtree", Arial, Helvetica, sans-serif;
+   @include fluid-text(70, 38);
+   text-align: center;
+   padding: 8px 72px;
+   margin-left: -15px;
+   vertical-align: middle;
+   line-height: 1.2;
+   position: relative;
+
+   @include desktop-bottom {
+      padding-block: 16px;
+   }
+
+   @include mobile {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      border-radius: 12px;
+      height: 99px;
+      padding-top: 35px;
+      margin-left: 0;
+      width: 100%;
+   }
+
+   &::after {
+      content: "WordPress";
+      padding: 10px 26px;
+      background-color: var(--quizle-primary-color);
+      color: var(--quizle-primary-color-text);
+      border-radius: 30px;
+      font-family: "Figtree", Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      position: absolute;
+      top: -23px;
+      right: -30px;
+      font-weight: 500;
+      -webkit-animation:
+         top-transform-decor-intro 1s,
+         rotate-decor-intro 1s ease-in-out 2;
+              animation:
+         top-transform-decor-intro 1s,
+         rotate-decor-intro 1s ease-in-out 2;
+
+      @include tablet-bottom {
+         top: -20px;
+      }
+
+      @include mobile {
+         right: calc(50% - 76px);
+         top: -15px;
+      }
+   }
+}
+
+@-webkit-keyframes top-transform-decor-intro {
+   0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      scale: 1.7;
+   }
+
+   100% {
+      -webkit-transform: translateY(5%);
+              transform: translateY(5%);
+      scale: 1;
+   }
+}
+
+@keyframes top-transform-decor-intro {
+   0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      scale: 1.7;
+   }
+
+   100% {
+      -webkit-transform: translateY(5%);
+              transform: translateY(5%);
+      scale: 1;
+   }
+}
+
+@-webkit-keyframes rotate-decor-intro {
+   0% {
+      rotate: 5deg;
+   }
+
+   25% {
+      rotate: -5deg;
+   }
+
+   50% {
+      rotate: 5deg;
+   }
+
+   75% {
+      rotate: -5deg;
+   }
+
+   100% {
+      rotate: 5deg;
+   }
+}
+
+@keyframes rotate-decor-intro {
+   0% {
+      rotate: 5deg;
+   }
+
+   25% {
+      rotate: -5deg;
+   }
+
+   50% {
+      rotate: 5deg;
+   }
+
+   75% {
+      rotate: -5deg;
+   }
+
+   100% {
+      rotate: 5deg;
+   }
+}
+
+.arrow-down {
+   position: absolute;
+   top: 35px;
+   left: 30px;
+   width: 122px;
+   height: 122px;
+
+   @include desktop-bottom {
+      top: 40px;
+      left: 34px;
+      width: 85px;
+      height: 85px;
+   }
+
+   @include tablet {
+      top: 30px;
+      left: 25px;
+      width: 82px;
+      height: 77px;
+   }
+
+
+   @include mobile {
+      display: none;
+   }
+}
+
+.circle-intro-decor {
+   position: absolute;
+   background-color: var(--quizle-accent-pink-color);
+   border-radius: 10px;
+   z-index: -1;
+   -webkit-animation: shine-decor-intro2 infinite alternate;
+           animation: shine-decor-intro2 infinite alternate;
+}
+
+@-webkit-keyframes shine-decor-intro2 {
+   0% {
+      opacity: 1;
+      -webkit-transform: rotate(0deg) translateX(150px);
+              transform: rotate(0deg) translateX(150px);
+   }
+
+   100% {
+      opacity: 0.5;
+      -webkit-transform: rotate(360deg) translateX(150px);
+              transform: rotate(360deg) translateX(150px);
+   }
+}
+
+@keyframes shine-decor-intro2 {
+   0% {
+      opacity: 1;
+      -webkit-transform: rotate(0deg) translateX(150px);
+              transform: rotate(0deg) translateX(150px);
+   }
+
+   100% {
+      opacity: 0.5;
+      -webkit-transform: rotate(360deg) translateX(150px);
+              transform: rotate(360deg) translateX(150px);
+   }
+}

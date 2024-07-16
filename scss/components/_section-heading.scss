@@ -1,0 +1,14 @@
+.section-heading {
+   margin-bottom: 40px;
+   display: flex;
+   align-items: flex-start;
+   gap: 80px;
+
+   @include tablet {
+      gap: 45px;
+   }
+
+   @include mobile {
+      display: block;
+   }
+}

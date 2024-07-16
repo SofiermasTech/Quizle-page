@@ -1,0 +1,21 @@
+@import 'variables-plugins', 'variables-quizle', 'fonts', 'mixin', 'media', 'global', 'utils';
+
+@import 'components/section-heading';
+@import 'components/decor';
+@import 'components/btn-buy';
+@import 'components/sticker';
+@import 'components/navigation-link-accent';
+@import 'components/quize-card';
+@import 'components/btn-filter-mobile';
+
+@import 'blocks/header';
+@import 'blocks/section-intro';
+@import 'blocks/section-benefits';
+@import 'blocks/section-video';
+@import 'blocks/section-type-quize';
+@import 'blocks/section-type-question';
+@import 'blocks/section-categories';
+@import 'blocks/section-quize-cards';
+@import 'blocks/section-integr';
+@import 'blocks/section-qa';
+@import 'blocks/footer';

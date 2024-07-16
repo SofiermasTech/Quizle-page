@@ -1,0 +1,29 @@
+:root {
+   @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+   }
+}
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+   font-size: var(--quizle-font-size);
+   color: var(--quizle-text-color);
+   line-height: 1.3;
+   min-width: 360px;
+}
+
+a,
+a:visited {
+   color: inherit;
+   text-decoration: none;
+}
+
+a:hover {
+   color: var(--quizle-primary-color);
+}
+
+ol:not([class]):before,
+p:before,
+ul:not([class]):before {
+   content: none;
+}

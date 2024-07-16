@@ -1,0 +1,210 @@
+.section-type-quize {
+   padding-block: var(--section-padding-y);
+   background-color: var(--quizle-primary-color);
+   position: relative;
+
+   &__title {
+      color: var(--quizle-primary-color-text);
+      margin: 0;
+   }
+
+   &__subtitle {
+      margin-top: 17px;
+      color: var(--quizle-primary-color-text);
+      max-width: 50%;
+
+      @include mobile {
+         max-width: 100%;
+      }
+   }
+
+   &__cards {
+      @include flex-row-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      gap: 30px;
+      padding-top: 40px;
+      padding-bottom: 60px;
+
+      @include mobile {
+         padding-top: 0;
+      }
+   }
+
+   &__card {
+      padding: 30px;
+      @include flex-row-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 30px;
+      background-color: var(--quizle-accent-transparent-color);
+      border-radius: 12px;
+      min-width: 280px;
+      max-width: 350px;
+      max-height: 580px;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+
+      @include hover {
+         opacity: 0.9;
+         scale: 1.03;
+       }
+
+      @include desktop-bottom {
+         max-width: 100%;
+         max-height: 100%;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: row;
+                 flex-direction: row;
+         -webkit-box-align: start;
+             -ms-flex-align: start;
+                 align-items: flex-start;
+         gap: 160px;
+      }
+
+      @include tablet {
+         gap: 50px;
+      }
+
+      @include mobile {
+         max-width: 100%;
+         max-height: 580px;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+      }
+
+      &--small {
+         max-height: 400px;
+
+         @include desktop-bottom {
+            width: 100%;
+            max-height: 100%;
+         }
+      }
+   }
+
+   &__card-icon {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+
+      @include desktop-bottom {
+         top: -4px;
+         right: 94%;
+      }
+
+      @include tablet {
+         right: 91%;
+      }
+
+      @include mobile {
+         top: 0;
+         right: 0;
+      }
+   }
+
+   &__card-text {
+      color: var(--quizle-primary-color-text);
+
+      h3 {
+         @include fluid-text(24, 18);
+         margin-bottom: 24px;
+         text-align: left;
+         position: relative;
+
+         @include desktop-bottom {
+            padding-left: 50px;
+         }
+
+         @include mobile {
+            padding-left: 0;
+         }
+      }
+
+      p {
+         @include fluid-text(16, 14);
+         margin-bottom: 10px;
+         text-align: left;
+      }
+   }
+
+   &__card-img {
+      text-align: center;
+      width: 100%;
+
+      @include desktop-bottom {
+         width: 100%;
+         max-width: 30%;
+      }
+
+      @include mobile {
+         max-width: 100%;
+      }
+
+      svg {
+         -o-object-fit: cover;
+            object-fit: cover;
+         -o-object-position: bottom;
+            object-position: bottom;
+      }
+   }
+
+   &__btn-buy {
+      width: 340px;
+      height: 180px;
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - 170px);
+      background-color: var(--quizle-accent-pink-color);
+      z-index: 99;
+      border-radius: 12px;
+      -webkit-transform: translateY(60px);
+          -ms-transform: translateY(60px);
+              transform: translateY(60px);
+      opacity: 0;
+      -webkit-transition: 0.3s ease-in;
+      -o-transition: 0.3s ease-in;
+      transition: 0.3s ease-in;
+
+      &.show {
+         opacity: 1;
+         -webkit-transform: translateY(0);
+             -ms-transform: translateY(0);
+                 transform: translateY(0);
+      }
+
+      @include desktop-bottom {
+         bottom: -81px;
+         left: 60%;
+      }
+
+      @include tablet {
+         left: calc(50% - 170px);
+      }
+
+      @include mobile {
+         width: 280px;
+         left: calc(50% - 140px);
+      }
+
+
+      & .navigation-link-accent {
+         background-color: var(--quizle-accent-pink-light-color);
+
+         @include hover {
+            background-color: var(--quizle-primary-color);
+            color: var(--quizle-primary-color-text);
+         }
+      }
+   }
+
+}

@@ -1,0 +1,79 @@
+.sticker {
+   width: 145px;
+   height: 140px;
+   border-radius: 8px;
+   background-color: var(--quizle-accent-green-color);
+   position: relative;
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
+   -webkit-animation: scale-btn-play-quizle 2s linear infinite alternate;
+           animation: scale-btn-play-quizle 2s linear infinite alternate;
+
+   @include tablet-bottom {
+      width: 125px;
+      height: 120px;
+   }
+
+   &:before,
+   &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 140px;
+      background: inherit;
+      border-radius: 8px;
+
+      @include tablet-bottom {
+         width: 125px;
+         height: 120px;
+      }
+   }
+
+   &:before {
+      -webkit-transform: rotate(30deg);
+          -ms-transform: rotate(30deg);
+              transform: rotate(30deg);
+      -webkit-animation: rotate-elm 13s linear infinite alternate;
+              animation: rotate-elm 13s linear infinite alternate;
+   }
+
+   &:after {
+      -webkit-transform: rotate(60deg);
+          -ms-transform: rotate(60deg);
+              transform: rotate(60deg);
+      animation: rotate-elm 13s linear infinite alternate-reverse;
+
+   }
+}
+
+@-webkit-keyframes rotate-elm {
+   100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+   }
+}
+
+@keyframes rotate-elm {
+   100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+   }
+}
+
+@-webkit-keyframes rotate-elm2 {
+   100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+   }
+}
+
+@keyframes rotate-elm2 {
+   100% {
+      -webkit-transform: rotate(359deg);
+              transform: rotate(359deg);
+   }
+}

@@ -1,0 +1,54 @@
+.section-quize-cards {
+
+   &__container {
+      padding: 10px;
+   }
+
+   &__content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 350px);
+      grid-auto-rows: 350px;
+      grid-auto-flow: dense;
+      justify-items: center;
+      gap: 20px;
+      padding-left: 0;
+
+      @include desktop-bottom {
+         grid-template-columns: repeat(3, 1fr);
+         gap: 15px;
+      }
+
+      @include tablet {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+   }
+
+   &__load-more {
+      display: block;
+      margin: 40px auto 0;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      padding: 19px 54px;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: var(--quizle-primary-color);
+      cursor: pointer;
+      transition: 0.3s;
+
+      @include hover {
+        opacity: 0.8;
+        scale: 1.05;
+      }
+   }
+}

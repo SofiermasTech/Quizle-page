@@ -1,0 +1,179 @@
+.site-footer {
+   width: 100%;
+   margin: 0 auto;
+
+   &__inner {
+      @include flex-row-between;
+      padding-inline: 100px;
+      gap: 40px;
+
+      @include desktop-bottom {
+         padding-inline: 50px;
+      }
+
+      @include tablet-bottom {
+         padding-inline: 10px;
+      }
+
+      @include mobile {
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+         padding-inline: 20px;
+         -webkit-column-gap: 45px;
+            -moz-column-gap: 45px;
+                 column-gap: 45px;
+      }
+   }
+
+   &__company {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      min-height: 200px;
+
+      @include mobile {
+         min-height: 160px;
+      }
+   }
+
+   &__top {
+      margin-bottom: 10px;
+
+      @include mobile {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__title {
+      font-family: 'Figtree', Arial, Helvetica, sans-serif;
+      @include fluid-text(32, 24);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--quizle-primary-color);
+      margin-bottom: 0px;
+   }
+
+   &__description {
+      margin: 0;
+      font-weight: 400;
+   }
+
+   &__socials {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      gap: 16px;
+      margin-bottom: 16px;
+   }
+
+   &__social {
+      color: var(--quizle-text-color);
+
+      @include hover {
+         color: var(--quizle-primary-color);
+      }
+
+      svg {
+         width: 30px;
+         height: 30px;
+      }
+   }
+
+   &__menu {
+      @include flex-row-between;
+      gap: 110px;
+
+      @include desktop-bottom {
+         gap: 40px;
+      }
+
+      @include tablet-bottom {
+         gap: 20px;
+      }
+   }
+
+   &__menu-info,
+   &__menu-plugin {
+      margin-top: 50px;
+
+      @include mobile {
+         margin-top: 0;
+      }
+
+   }
+
+   &__menu-lists {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-column-gap: 30px;
+         -moz-column-gap: 30px;
+              column-gap: 30px;
+   }
+
+   &__menu-title {
+      @include fluid-text(16, 16);
+      font-weight: 900;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+   }
+
+   &__menu-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0;
+   }
+
+   &__menu-item {
+      @include fluid-text(16, 16);
+      margin-bottom: 15px;
+      max-width: 200px;
+
+      a {
+         @include hover {
+            color: var(--quizle-primary-color);
+            font-weight: inherit;
+         }
+      }
+   }
+
+   &__logo-wpshop {
+
+      a {
+         @include hover {
+            color: var(--quizle-primary-color);
+
+            svg {
+               color: inherit;
+            }
+         }
+
+         svg {
+            margin-right: 5px;
+            color: inherit;
+         }
+      }
+   }
+
+   &__logo-wpshop-content {
+      display: inline-block;
+      vertical-align: middle;
+   }
+}

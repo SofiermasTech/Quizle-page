@@ -1,0 +1,137 @@
+.site-header-inner {
+   @include mobile {
+      padding-right: 10px;
+   }
+}
+
+.humburger {
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+       -ms-transform: translateY(-50%);
+           transform: translateY(-50%);
+}
+
+.site-branding {
+   &__body {
+      @include hover {
+         a {
+            opacity: 0.8;
+         }
+      }
+   }
+}
+
+.site-title {
+   font-family: 'Figtree', Arial, Helvetica, sans-serif;
+   color: var(--quizle-primary-color);
+   font-weight: 900;
+   margin: 0;
+}
+
+.header-flex {
+   @include flex-row-between;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+}
+
+.main-navigation {
+   margin-bottom: 0;
+
+   // У меня ниже стили меню написаны по классу, а у вас по тегам. Специфичность у вас получается выше.
+   // Чтобы переопределить ваши стили, мне нужно оставить такую формултровку ниже? Или вообще убрать классы?
+   ul li>a {
+      padding: 12px 22px;
+   }
+
+   &__list {
+      margin-left: 0;
+      margin-right: 0;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 20px;
+   }
+
+   &__list-item {
+      -webkit-transition: color 3s linear;
+      -o-transition: color 3s linear;
+      transition: color 3s linear;
+
+      // Такой вариант менее специфичен
+      a {
+         padding: 15px 22px;
+         -webkit-transition: 0.1s;
+         -o-transition: 0.1s;
+         transition: 0.1s;
+      }
+
+      &.navigation-link-accent a {
+         @include hover {
+            color: #fff;
+         }
+      }
+   }
+
+   &__header-mobile-link.navigation-link-accent {
+      display: none;
+      background-color: var(--quizle-primary-color);
+
+      a {
+         color: #fff;
+      }
+
+      @include tablet {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+      }
+   }
+}
+
+.main-navigation-inner {
+   padding: 0;
+}
+
+// Мобильное меню
+.mobile-menu-placeholder {
+   background-color: var(--quizle-primary-color);
+
+   ul {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 20px;
+      background-color: var(--quizle-primary-color);
+   }
+
+   li {
+      border-radius: 25px;
+      color: #fff;
+
+      @include hover {
+         border: 1px solid #fff;
+
+         a {
+            color: #fff;
+         }
+      }
+   }
+}
+
+// Вопрос: у вас в разметке определены заранее псевдоэлементы для некоторых тегов, 
+// можете уточнить для чего это сделано? Я убрала их так из разметки. Ок?
+@media (min-width: 992px) {
+
+   .main-navigation ul li>a:before,
+   .main-navigation ul li>span:before {
+      display: none;
+   }
+}

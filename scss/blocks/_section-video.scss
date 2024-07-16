@@ -45,8 +45,8 @@
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       gap: 10px;
       font-size: 16px;
       line-height: .9;
@@ -76,11 +76,11 @@
 
       @include tablet {
          -ms-flex-wrap: wrap;
-             flex-wrap: wrap;
+         flex-wrap: wrap;
          -webkit-box-orient: horizontal;
          -webkit-box-direction: normal;
-             -ms-flex-direction: row;
-                 flex-direction: row;
+         -ms-flex-direction: row;
+         flex-direction: row;
       }
    }
 
@@ -91,12 +91,12 @@
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       -ms-flex-line-pack: start;
-          align-content: flex-start;
+      align-content: flex-start;
       -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       gap: 25px;
 
       @include desktop-bottom {
@@ -128,8 +128,8 @@
          max-width: 100%;
          padding: 25px 25px 25px 60px;
          -webkit-box-flex: 1;
-             -ms-flex-positive: 1;
-                 flex-grow: 1;
+         -ms-flex-positive: 1;
+         flex-grow: 1;
       }
 
       &--big {
@@ -168,11 +168,10 @@
       }
    }
 
-
    &__poster {
       -ms-flex-negative: 0;
-          flex-shrink: 0;
-      background: url('../../images/poster-video-xs.webp') no-repeat;
+      flex-shrink: 0;
+      background: url('../images/poster-video-xs.webp') no-repeat;
       background-position: center;
       background-size: cover;
       width: 300px;
@@ -182,14 +181,14 @@
 
       @include tablet {
          width: 100%;
-         background: url('../../images/poster-video-xl.webp') no-repeat;
+         background: url('../images/poster-video-xl.webp') no-repeat;
          height: 400px;
          background-position: center;
          background-size: contain;
       }
 
       @include mobile {
-         background: url('../../images/dist/poster-video-xs.png') no-repeat;
+         background: url('../images/dist/poster-video-xs.png') no-repeat;
          height: 500px;
          background-position: center;
          background-size: contain;
@@ -201,8 +200,8 @@
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       border-radius: 50%;
       border: 3px solid #e9eaec;
       width: 130px;
@@ -212,7 +211,7 @@
       background-image: linear-gradient(var(--quizle-accent-transparent-color), var(--quizle-primary-color));
       -webkit-box-shadow: 0 0 30px rgba(235, 235, 235, 0.5),
          inset 0 0 10px rgb(45, 6, 91, 90%);
-              box-shadow: 0 0 30px rgba(235, 235, 235, 0.5),
+      box-shadow: 0 0 30px rgba(235, 235, 235, 0.5),
          inset 0 0 10px rgb(45, 6, 91, 90%);
       cursor: pointer;
 
@@ -223,20 +222,20 @@
          top: 50%;
          left: 50%;
          -webkit-transform: translate(-50%, -50%);
-             -ms-transform: translate(-50%, -50%);
-                 transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
          -webkit-transform-origin: 0 0;
-             -ms-transform-origin: 0 0;
-                 transform-origin: 0 0;
+         -ms-transform-origin: 0 0;
+         transform-origin: 0 0;
          border-radius: 50%;
          border: 4px solid #e9eaec;
          width: 90px;
          height: 90px;
          background-color: #fff;
          -webkit-box-shadow: 0 0 30px rgba(86, 73, 105, 0.5);
-                 box-shadow: 0 0 30px rgba(86, 73, 105, 0.5);
+         box-shadow: 0 0 30px rgba(86, 73, 105, 0.5);
          -webkit-animation: scale-btn-play-quizle 1s linear infinite alternate;
-                 animation: scale-btn-play-quizle 1s linear infinite alternate;
+         animation: scale-btn-play-quizle 1s linear infinite alternate;
       }
 
       &::after {
@@ -245,15 +244,15 @@
          top: 50%;
          left: 50%;
          -webkit-transform: translate(-37%, -50%);
-             -ms-transform: translate(-37%, -50%);
-                 transform: translate(-37%, -50%);
+         -ms-transform: translate(-37%, -50%);
+         transform: translate(-37%, -50%);
          width: 0;
          height: 0;
          border-top: 20px solid transparent;
          border-left: 30px solid var(--quizle-accent-green-color);
          border-bottom: 20px solid transparent;
          -webkit-animation: scale-btn-play-quizle 1s linear infinite alternate;
-                 animation: scale-btn-play-quizle 1s linear infinite alternate;
+         animation: scale-btn-play-quizle 1s linear infinite alternate;
       }
    }
 
@@ -262,18 +261,18 @@
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
       z-index: 1000;
       display: none;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       background-color: rgba(17, 17, 17, 0.7);
 
       &.video-show {
